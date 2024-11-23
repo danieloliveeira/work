@@ -14,3 +14,14 @@ form div input, textarea{
   padding: 0 2rem;
   resize: none;
 }
+nav{
+  padding: 0.5rem 1rem;
+  background-color: #212121;
+  display: flex;
+  align-items: center;
+  justify-content: space-between
+}
+ul{
+  display: flex;
+  gap: 1rem;
+}

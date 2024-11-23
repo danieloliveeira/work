@@ -1,16 +1,18 @@
 
 import './App.css';
-import Router from './routes';
+import { HashRouter,Route, Routes } from 'react-router-dom';
+import Home from './components/Home';
+import  Form  from './components/forms';
 
 
 function App() {
   return (
-    <div className="App">
-      <h1>Daniel</h1>
-      <Router />
-    </div>
-
-    
+    <HashRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/form" element={<Form />} />
+      </Routes>
+    </HashRouter>
   );
 }
 

@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-
+import '../index.css'
 
 export function Form({title, textButton}) {
 
