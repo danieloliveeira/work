@@ -1,13 +1,18 @@
 import '../index.css'
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Navbar = () => {
   return (
-    <nav>
-        <h2>PAGES</h2>
+    <nav className='nav'>
+        <Link to='/work' className='icon'>Beginners</Link>
         <ul>
-            <li>New post</li>
-            <li>Home</li>
+          <li>
+            <Link to="/about">Sobre</Link>
+          </li>
+          <li>
+            <Link to="/profile">Perfil</Link>
+          </li>
         </ul>
     </nav>
   )

@@ -1,41 +1,26 @@
 import React from 'react';
 import './App.css';
-import {Route } from 'react-router-dom';
-import Home from './components/Home';
-import  About from './components/About';
-import  {Link} from "react-router-dom";
+import Navbar from './components/Navbar';
+import { Route, Routes } from 'react-router-dom';
+import Home from './pages/Home';
+import Profile from './pages/Profile';
+import About from './pages/About';
 
-
-class App extends React.Component {
-  render() {
-      return (
-        <div className="App">
-          <div>
-            <nav>
-              <ul id="navigation">
-                <li>
-                  <Link to="/">Home</Link>
-                </li>
-                <li>
-                <Link to="/about">About</Link>
-                </li>
-                <li>
-                <Link to="/contact">Contact</Link>
-                </li>
-              </ul>
-            </nav>
-          </div>
-
-            <Route exact path="/">
-              <Home />
-            </Route>
-            <Route path="/about">
-              <About />
-            </Route>
-
-        </div>
-      );
-    }
+const App = () => {
+  console.log(window.location)
+  return (
+     <>
+        <Navbar />
+        <Routes>
+            <Route path='/work' element={<Home />}/>
+            <Route path='/about' element={<About/>}/>
+            <Route path='/profile' element={<Profile />}/>
+            
+        </Routes>
+     </>
+     
+    
+  )
 }
 
-export default App;
+export default App
