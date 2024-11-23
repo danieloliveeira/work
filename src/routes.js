@@ -4,8 +4,8 @@ import Home from './components/Home'
 export function Router() {
     return(
        <Routes>
-            <Route path='/' element={<Home/>}/>
-            <Route path='/form' element={<Form />}/>
+            <Route path='/work' element={<Home/>}/>
+            <Route path='/work/form' element={<Form />}/>
        </Routes>
     )
 }
